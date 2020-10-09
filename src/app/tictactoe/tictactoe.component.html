@@ -1,0 +1,25 @@
+<div class="container text-center">
+  <table>
+    <tr>
+      <td> {{ tables[0] }}</td>
+      <td>{{ tables[1] }}</td>
+      <td>{{ tables[2] }}</td>
+    </tr>
+    <tr>
+      <td>{{ tables[3] }}</td>
+      <td>{{ tables[4] }}</td>
+      <td>{{ tables[5] }}</td>
+    </tr>
+    <tr>
+      <td>{{ tables[6] }}</td>
+      <td>{{ tables[7] }}</td>
+      <td>{{ tables[8] }}</td>
+    </tr>
+  </table>
+  <div>
+    <label>Enter your move:
+      <input type="text" [(ngModel)]="mov" name="move" placeholder="Enter a number..">
+    </label> <br>
+    <button class="btn btn-primary" type="button" (click) = "move()">Move</button>
+  </div>
+</div>

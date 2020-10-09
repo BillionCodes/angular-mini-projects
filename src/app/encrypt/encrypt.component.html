@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <form #textForm = "ngForm">
+      <fieldset align="left"><h4>
+      <legend>Encryption Mode</legend>
+      <input type="radio" name="mode" checked id="cipher"><label for="cipher" onchange="cipher()">Ceaser Cipher</label>
+      <input type="radio" name="mode" id="num"><label for="num" onchange="numformt()">Relative Number</label> 
+      <input [disabled]="true" type="radio" name="mode" sid="flydr"><label for="flydr">St. Flydr</label>
+      </h4>
+      </fieldset>
+      <textarea class="form-control" rows="5" #opt cols="75" name="text1" [(ngModel)] = "text" placeholder="Enter your text here"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-sm-1">
+        <button class="btn btn-primary" (click)="translate()">Translate</button> </div>
+        <div class="col-sm-1">
+          <input class="form-control" type="number" name="alt1" [(ngModel)]="key">
+        </div>
+      </div>
+      <br>
+      <textarea class="form-control" readonly rows="5" #opt cols="75" name="converted" [(ngModel)] = "converted" placeholder="translated.."></textarea>
+    </form>
+  </div>

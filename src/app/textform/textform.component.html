@@ -1,0 +1,20 @@
+<div class="container text-center">
+  <form #textForm = "ngForm">
+    <textarea class="form-control" rows="10" #opt cols="150" name="text1" [(ngModel)] = "text" placeholder="Enter your text here" (keyup)="txtGetter(opt.value)"></textarea>
+    {{ text }}
+    <br>
+    <div class="row">
+      <div class="col-sm-1">
+      <button class="btn btn-primary" (click)="format()">Format</button> </div>
+      <div class="col-sm-1">
+      <select class="form-control" name="opt" [(ngModel)]="change">
+        <option *ngFor='let i of opts' [value]="i">{{ i }}</option>
+      </select>
+      {{ change }}
+      </div>
+      <div class="col-sm-1">
+        <input class="form-control" type="text" name="alt1" [(ngModel)]="alt">
+      </div>
+    </div>
+  </form>
+</div>
